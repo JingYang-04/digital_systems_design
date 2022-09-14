@@ -42,7 +42,7 @@ As a Mississippi State University student, I will conduct myself with honor and 
         :x: This sums to 0x10A, which becomes 0x0A as an 8-bit value.
 
 
-.. fillintheblank:: nMBL2rA6ke
+.. fillintheblank:: FhlFiyofqG
 
     (4 points) What is 0x8A + 0x80 when using unsigned saturating 8-bit addition?
 
@@ -50,7 +50,7 @@ As a Mississippi State University student, I will conduct myself with honor and 
         :x: This produces a carry, so the value saturates to 0xFF.
 
 
-.. fillintheblank:: nMBL2rA6ke
+.. fillintheblank:: Pt0cazBfEr
 
     (4 points) What is 0x8A + 0x80 when using signed saturating 8-bit addition?
 
@@ -63,7 +63,7 @@ As a Mississippi State University student, I will conduct myself with honor and 
             Therefore, the value saturates to the most negative value of 0x80.
 
 
-.. fillintheblank:: nMBL2rA6ke
+.. fillintheblank:: jZB84lZPvg
 
     (4 points) What is 0x7A + 0x70 when using standard (unsaturating) 8-bit addition?
 
@@ -71,7 +71,7 @@ As a Mississippi State University student, I will conduct myself with honor and 
         :x: This sums to 0xEA.
 
 
-.. fillintheblank:: nMBL2rA6ke
+.. fillintheblank:: ygXWE9fvp1
 
     (4 points) What is 0x7A + 0x70 when using unsigned saturating 8-bit addition?
 
@@ -79,7 +79,7 @@ As a Mississippi State University student, I will conduct myself with honor and 
         :x: This produces no carry, so the value is 0xEA.
 
 
-.. fillintheblank:: nMBL2rA6ke
+.. fillintheblank:: NsTki4DT20
 
     (4 points) What is 0x7A + 0x70 when using signed saturating 8-bit addition?
 
