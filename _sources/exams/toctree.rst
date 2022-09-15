@@ -34,4 +34,4 @@ This allows you to verify that the Verilog compile/run process works correctly o
         :maxdepth: 1
         :glob:
 
-        2022/y2022_fall_exam_?
+        2022/fall_exam_?
