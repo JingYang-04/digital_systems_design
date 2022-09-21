@@ -3,7 +3,7 @@
 // *********
 // |docname|
 // *********
-// (15 points) Complete the Verilog module below based on the provided description.
+// (15 points) Complete the Verilog module below based on the provided description. Here is one `solution <fall_exam_1_problem_01-solution>`.
 //
 // Code
 // ====

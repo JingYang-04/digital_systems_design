@@ -3,7 +3,7 @@
 // *********
 // |docname|
 // *********
-// (20 points) Write Verilog that outputs the value that was input two clocks cycles ago. For example, an input of 1, 2, 3, 4, ... would produce outputs of (unknown), (unknown), 1, 2, 3, 4, ...
+// (20 points) Write Verilog that outputs the value that was input two clocks cycles ago. For example, an input of 1, 2, 3, 4, ... would produce outputs of (unknown), (unknown), 1, 2, 3, 4, ... Here is one `solution <fall_exam_1_problem_04-solution>`.
 //
 // Code
 // ====
