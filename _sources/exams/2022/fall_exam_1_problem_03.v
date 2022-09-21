@@ -3,7 +3,7 @@
 // *********
 // |docname|
 // *********
-// (20 points) Write Verilog that implements the following schematic. The Verilog operator for an exclusive OR is ``^``. As shown in the schematic, the reset should force the ``q`` output to be 4'b0001. Here is one `solution <fall_exam_1_problem_03-solution>`.
+// (20 points) Write Verilog that implements the following schematic. The Verilog operator for an exclusive OR is ``^``. As shown in the schematic, the reset should force the ``q`` output to be ``4'b0001``. Here is one `solution <fall_exam_1_problem_03-solution>`.
 //
 // .. image:: fall_exam_1_problem_03.png
 //
