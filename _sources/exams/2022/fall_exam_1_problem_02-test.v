@@ -40,13 +40,16 @@ module tb_problem;
         for (i = 0; i < 2**12; i = i + 1) begin
             a = i[5:0];
             b = i[11:6];
+            #10
             a_signed = a;
             b_signed = b;
             ltu_expected = a < b;
             lt_expected = a_signed < b_signed;
             eq_expected = a === b;
             if (ltu !== ltu_expected || lt !== lt_expected || eq !== eq_expected) begin
-                $display("FAIL: a = %d, b = %d, lt = %d, ltu = %d, eq = %d, lt_expected = %d, ltu_expected = %d, eq_expected = %d", a, b, lt, ltu, eq, lt_expected, ltu_expected, eq_expected);
+                $write("FAIL: a = %d, b = %d\n", a, b);
+                $write("  expected: lt = %d, ltu = %d, eq = %d\n", lt_expected, ltu_expected, eq_expected);
+                $write("  actual:   lt = %d, ltu = %d, eq = %d\n", lt, ltu, eq);
                 errors = errors + 1;
             end
         end
@@ -56,6 +59,7 @@ module tb_problem;
         end else begin
             $display("FAIL: %d errors occurred.", errors);
         end
+        $finish;
 
     end
 
