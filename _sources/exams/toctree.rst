@@ -27,11 +27,10 @@ This allows you to verify that the Verilog compile/run process works correctly o
     verilog_introduction_ex_1.v
 
 
-..
-    Fall 2022
-    ===========
-    .. toctree::
-        :maxdepth: 1
-        :glob:
+Fall 2022
+===========
+.. toctree::
+    :maxdepth: 1
+    :glob:
 
-        2022/fall_exam_?
+    2022/fall_exam_?
