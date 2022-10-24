@@ -4,7 +4,7 @@
 Exam 2, Fall 2022
 *******************
 
--   You may use only the provided reference materials and one sheet of notes.
+-   This exam is open book, open notes. You may **not** consult with any other person or search the Internet for solutions.
 -   Absolutely NO cheating is allowed.  If you are caught in the attempt of, the act of, or the past action of academic dishonesty, you will receive the maximum punishment allowed by University policy.
 -   "Signed" representation means 2's complement encoding.
 -   When writing Verilog code fragments to represent hardware, you cannot minimize or change the hardware in anyway -- your Verilog code must be an accurate representation of the hardware that is shown. A fragment means that it is not a full Verilog module -- use ``wire`` and ``reg`` statements as necessary to declare necessary signals. Verilog is case sensitive for signal names, so you need to be careful in writing signal names.
