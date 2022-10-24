@@ -286,7 +286,7 @@ html_show_sourcelink = False
 # substantially speeding up page rendering. May cause issues with books that
 # have custom directives or raw html that assume jquery or another library
 # is loaded before body is parsed.
-html_defer_js = True
+html_defer_js = False
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'PythonCoursewareProjectdoc'

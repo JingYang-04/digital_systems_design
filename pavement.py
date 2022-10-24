@@ -41,7 +41,7 @@ options(
             'dburl': 'postgresql://user:password@localhost/runestone',
             'default_ac_lang': 'python',
             'downloads_enabled': 'false',
-            'enable_chatcodes': 'False',
+            'enable_chatcodes': 'false',
             'allow_pairs': 'False',
             'dynamic_pages': True,
             'use_services': 'true',
