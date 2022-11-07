@@ -5,6 +5,7 @@
 // *********
 // |docname|
 // *********
+`include "verification_code.v"
 `timescale 1ns / 1ps
 
 module tb_problem;
