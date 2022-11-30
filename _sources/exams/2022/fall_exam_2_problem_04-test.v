@@ -5,7 +5,6 @@
 // *********
 // |docname|
 // *********
-`include "verification_code.v"
 `timescale 1ns / 1ps
 
 module tb_problem;
@@ -71,7 +70,8 @@ module tb_problem;
         end
 
         if (errors === 0) begin
-            $display("PASS: All test vectors passed.\nCorrect.\n%0d", `VERIFICATION_CODE);
+            $display("PASS: All test vectors passed\nCorrect.");
+            `ifdef VERIFICATION_CODE $display("%d", `VERIFICATION_CODE); `endif
         end else begin
             $display("FAIL: %0d errors occurred.", errors);
         end

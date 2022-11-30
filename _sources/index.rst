@@ -7,4 +7,3 @@ Digital Systems Design
 
     exams/toctree
     exercises/toctree
-    verification_code.v
