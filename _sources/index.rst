@@ -6,3 +6,5 @@ Digital Systems Design
     :maxdepth: 1
 
     exams/toctree
+    exercises/toctree
+    verification_code.v
