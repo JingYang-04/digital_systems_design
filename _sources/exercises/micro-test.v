@@ -5,9 +5,8 @@
 // **************************************************************
 // |docname| - Test the output from `micro.v`
 // **************************************************************
-// To use this stand-alone, also download `../verification_code.v` and the `test vectors <../_static/micro_vectors.txt>`_.
+// To use this stand-alone, also download the `test vectors <../_static/micro-test.txt>`_.
 
-`include "../verification_code.v"
 `timescale 1ns / 1ps
 
 module tb_micro;
@@ -52,14 +51,14 @@ module tb_micro;
         // Wait 100 ns for global reset to finish.
         reset = 1;
 
-        fd = $fopen("../../../../micro_vectors.txt", "r");
+        fd = $fopen("../../../../micro-test.txt", "r");
         // for post-route simulation, one directory deeper
-        fd = fd ? fd : $fopen("../../../../../micro_vectors.txt", "r");
+        fd = fd ? fd : $fopen("../../../../../micro-test.txt", "r");
         // When running as an e-book, in the current directory.
-        fd = fd ? fd : $fopen("micro_vectors.txt", "r");
+        fd = fd ? fd : $fopen("micro-test.txt", "r");
 
         if (fd === 0) begin
-          $display("Cannot open vectors file 'micro_vectors.txt', simulation exiting");
+          $display("Cannot open vectors file 'micro-test.txt', simulation exiting");
           $finish;
         end
 
@@ -88,7 +87,8 @@ module tb_micro;
 
         // Error check after the loop completes.
         if (errors == 0) begin
-            $display("PASS: All test vectors passed");
+            $display("PASS: All test vectors passed\nCorrect.");
+            `ifdef VERIFICATION_CODE $display("%d", `VERIFICATION_CODE); `endif
         end else begin
             $display("FAIL: %d errors occurred", errors);
         end

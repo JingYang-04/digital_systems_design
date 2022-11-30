@@ -1,6 +1,7 @@
 // ***********************************************************
 // |docname| - An in-class exercise on a small microcontroller
 // ***********************************************************
+// For stand-alone simulation, download the `test bench <micro-test.v>`.
 //
 // This microcontroller supports four opcodes.
 `define OP_LOAD (2'b00)

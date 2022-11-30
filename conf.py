@@ -221,7 +221,8 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 # Example: html_static_path =  runestone_static_dirs() + ['_static', 'other']
 html_static_path = runestone_static_dirs() + [
-    "_sources/exercises/micro_vectors.txt",
+    # See `_sources/exercises/micro-test.c`.
+    "_sources/exercises/micro-test.txt",
 ]
 
 # List of extra stylesheets that should be added to all html pages
