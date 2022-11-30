@@ -48,7 +48,7 @@ module micro(
             8'd00: inst = 13'b00____0____0___1_00000000;
             /// 01: sub b, w      ; Address is b (memory location 1).
             8'd01: inst = 13'b11____0____0___1_00000001;
-            /// 02: load if Z, if_body, pc  ; Literal is if_body (instruction 04)
+            /// 02: load if Z, if_body, pc  ; Literal is if_body (inst. 04)
             8'd02: inst = 13'b00____1____1___0_00000100;
             /// 03: load else_body, pc  ; Literal is else_body (instruction 08)
             8'd03: inst = 13'b00____1____0___0_00001000;
@@ -75,7 +75,8 @@ module micro(
             //  11: load a, w     ; Address is a (memory location 0)
             //  12: load b, w     ; Address is b (memory location 1)
             //  loop_forever: goto loop_forever;
-            //  13: load pc, loop_forever  ; Literal is loop_forever (instruction 13).
+            //  13: load pc, loop_forever  ; Literal is loop_forever
+            //                             ; (instruction 13).
 
             // SOLUTION_BEGIN
             ///   ; ++a;
@@ -146,7 +147,8 @@ module micro(
     // .. code-block:: verilog
     //  :linenos:
     //
-    //  // True if this instruction should be executed conditionally; false if it should always be executed.
+    //  // True if this instruction should be executed conditionally; false if
+    //  // it should always be executed.
     //  wire cond;
     //  assign cond = ???;
     //  // True if the addr field is an address; false if it's a literal value.
@@ -155,10 +157,12 @@ module micro(
     //  // True is this is a store instruction; false otherwise.
     //  wire is_store;
     //  assign is_store = ???;
-    //  // True if a value should be written to PC, W, or memory. This means the current instruction should be executed.
+    //  // True if a value should be written to PC, W, or memory. This means
+    //  // the current instruction should be executed.
     //  wire do_write;
     //  assign do_write = ???;
-    //  // True when one of the load signals (for PC, W, or memory) should be asserted.
+    //  // True when one of the load signals (for PC, W, or memory) should be
+    //  // asserted.
     //  wire do_ld = ???;
     //  // True to load the PC (program counter).
     //  assign pc_ld = ???;
@@ -169,7 +173,8 @@ module micro(
     //
     //  // Define the ALU.
     //
-    //  // The a input is either the memory at addr/lit or the value of addr/lit.
+    //  // The a input is either the memory at addr/lit or the value of
+    //  // addr/lit.
     //  assign a = ???;
     //  // The b input is either PC or W.
     //  assign b = ???;
