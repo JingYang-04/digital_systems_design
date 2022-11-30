@@ -129,7 +129,7 @@ module micro(
     // Perform a sync write.
     always @(posedge clk) begin
         if (mem_wr) begin
-            data_mem[inst[2:0]] <= d;
+            data_mem[inst[1:0]] <= d;
         end
     end
 
