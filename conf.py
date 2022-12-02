@@ -172,7 +172,7 @@ html_theme_path = [pkg_resources.resource_filename('runestone', 'common/project_
 # documentation.
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Digitial Systems Design",
+    'navbar_title': "Digital Systems Design",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Chapters",
