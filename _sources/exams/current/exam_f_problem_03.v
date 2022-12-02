@@ -3,7 +3,7 @@
 // *********
 // |docname|
 // *********
-// (25 points) Complete the Verilog module below based on the provided description. Here is the accompanying `testbench <exam_f_problem_03-test.v>`.
+// (30 points) Complete the Verilog module below based on the provided description. Here is the accompanying `testbench <exam_f_problem_03-test.v>`.
 //
 // When a motor spins, a device on it called an `encoder <https://en.wikipedia.org/wiki/Rotary_encoder>`_ generates pulses to track the rotation of the motor. Design a module that counts each edge of these pulses to track how far the motor has rotated. Include an interface to an embedded microcontroller (see lab 7) which allows the microcontroller to read and write the number of pulses counted.
 //

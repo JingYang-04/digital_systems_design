@@ -3,7 +3,7 @@
 // *********
 // |docname|
 // *********
-// (25 points) Complete the Verilog module below based on the provided description. Here is the accompanying `testbench <exam_2_problem_02-test.v>`.
+// (25 points) Complete the Verilog module below based on the provided description. Here is the accompanying `testbench <exam_f_problem_02-test.v>`.
 //
 // Design a Christmas lights module with the following behavior:
 //
