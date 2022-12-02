@@ -7,4 +7,4 @@ Exam
     :maxdepth: 1
     :glob:
 
-    fall_exam_?
+    exam_?

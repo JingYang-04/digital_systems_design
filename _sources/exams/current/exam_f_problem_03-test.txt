@@ -1,0 +1,24 @@
+i_dout   rden din      addr wren encoder_pulse Notes
+00000000    0 00000000    0    0             0 No access.                           .
+00000000    0 00000000    0    0             1 Rising edge (+1 to count).           .
+00000000    0 00000000    0    0             0 Falling edge (+1 to count).          .
+00000000    1 00000000    0    0             0 Read counter.                        .
+00000002    0 00000000    0    0             0 Check value read.                    .
+00000000    0 00000000    0    0             1 Rising edge (+1 to count).           .
+00000000    0 00000000    0    0             0 Falling edge (+1 to count).          .
+00000000    1 00000000    0    0             0 Read counter.                        .
+00000004    0 00000000    0    0             0 Check value read.                    .
+00000000    1 00000000    1    0             0 Read status/control.                 .
+00000001    0 00000000    0    0             0 Check value read (enable is true)    .
+00000000    0 00000000    1    1             0 Write status/control: disable counter.
+00000000    1 00000000    1    0             0 Read status/control.                 .
+00000000    0 00000000    0    0             0 Check value read (enable is false)   .
+00000000    0 00000000    0    0             1 Rising edge (+1 to count).           .
+00000000    0 00000000    0    0             0 Falling edge (+1 to count).          .
+00000000    0 a1378540    0    1             0 Write counter.                       .
+00000000    1 00000000    0    0             0 Read counter.                        .
+a1378540    0 00000000    0    0             0 Check value read.                    .
+00000000    1 00000000    2    0             0 Access outside register range.       .
+00000000    1 00000000    2    0             0 Access outside register range.       .
+00000000    1 00000000    3    0             0 Access outside register range.       .
+00000000    1 00000000    3    0             0 Access outside register range.       .

@@ -223,6 +223,10 @@ html_theme_options = {
 html_static_path = runestone_static_dirs() + [
     # See `_sources/exercises/micro-test.c`.
     "_sources/exercises/micro-test.txt",
+    "_sources/exams/current/exam_f_problem_01-test.txt",
+    "_sources/exams/current/exam_f_problem_02-test.txt",
+    "_sources/exams/current/exam_f_problem_03-test.txt",
+    "_sources/exams/current/exam_f_problem_04-test.txt",
 ]
 
 # List of extra stylesheets that should be added to all html pages
