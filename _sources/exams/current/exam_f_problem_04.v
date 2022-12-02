@@ -3,7 +3,7 @@
 // *********
 // |docname|
 // *********
-// (25 points) Complete the Verilog module below based on the provided description. Here is the accompanying `testbench <exam_f_problem_01-test.v>`.
+// (25 points) Complete the Verilog module below based on the provided description. Here is the accompanying `testbench <exam_f_problem_04-test.v>`.
 //
 // This microcontroller supports four opcodes.
 `define OP_LOAD (2'b00)
