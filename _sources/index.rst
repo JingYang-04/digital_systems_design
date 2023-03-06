@@ -7,3 +7,10 @@ Digital Systems Design
 
     exams/toctree
     exercises/toctree
+
+Book build tools
+****************
+.. toctree::
+    :maxdepth: 1
+
+    build/toctree

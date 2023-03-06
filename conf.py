@@ -13,15 +13,33 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys, os
+# Imports
+# =======
+# These are listed in the order prescribed by `PEP 8
+# <http://www.python.org/dev/peps/pep-0008/#imports>`_.
+#
+# Standard library
+# ----------------
+from pathlib import Path
+import pkg_resources
+import subprocess
+import sys
+
+# Third-party imports
+# -------------------
+from runestone import runestone_static_dirs, runestone_extensions
+import runestone
+import sphinx
+from sphinx.util import logging
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('../modules'))
 
-from runestone import runestone_static_dirs, runestone_extensions, setup
-import pkg_resources
+
+logger = logging.getLogger(__name__)
+
 
 # -- General configuration -----------------------------------------------------
 
@@ -137,6 +155,8 @@ CodeChat_lexer_for_glob = {
     '*.css': 'CSS',
     # ... and for JavaScript.
     '*.js': 'JavaScript',
+    # These files use # as a comment symbol, so call them Perl.
+    ".gitignore": "Perl",
 }
 #
 # **CodeChat note::** This is a list of exclude_patterns_ which applies only to
@@ -322,3 +342,34 @@ htmlhelp_basename = 'PythonCoursewareProjectdoc'
 #shortanswer_optional_div_class = 'journal alert alert-success'
 #showeval_div_class = 'runestone explainer alert alert-warning'
 #tabbed_div_class = 'alert alert-warning'
+
+
+def setup(app):
+    # Include Runestone setup.
+    runestone.setup(app)
+
+    # Run the waf build after the Runestone build, since waf needs variables produced by Runestone.
+    app.connect("build-finished", build_waf)
+
+    # return the usual `extension metadata <https://www.sphinx-doc.org/en/master/extdev/index.html#extension-metadata>`_.
+    return dict(parallel_read_safe=True)
+
+
+# Run the waf build.
+def build_waf(app: sphinx.application.Sphinx, exception: Exception):
+    cmd = [sys.executable, "waf", "build", "--jobs=1"]
+    cmd_str = ' '.join(cmd)
+    cwd = str(Path(__file__).resolve().parent)
+    logger.info(f"{cwd}% {cmd_str}...")
+    try:
+        cp = subprocess.run(cmd, check=True, cwd=cwd)
+    except subprocess.CalledProcessError as e:
+        logger.error(f"Build failed: {e}")
+    except FileNotFoundError as e:
+        logger.error(f"{e} when executing {cmd_str}.")
+    else:
+        logger.info(cp.stdout or "")
+
+
+# Fool ``conf.py`` check in ``runestone build``.
+## from runestone import setup
