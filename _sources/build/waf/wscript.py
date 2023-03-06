@@ -87,7 +87,7 @@ def options(opt):
         "--check-wrong",
         action="store_true",
         default=False,
-        # Do not enable this for code built on the web server, since student solutions will not contain the necessary "wrong" functions. See WAF_CHECK_WRONG_, `/signed_8-_and_16-bit_ops/signed_differences_ex_1-test.c` and `FUNC_COMPARE_WRONG`.
+        # Do not enable this for code built on the web server, since student solutions will not contain the necessary "wrong" functions.
         help="Run additional tests which verify that incorrect solutions do produce test failures.",
     )
     opt.add_option(
@@ -133,7 +133,7 @@ def configure(ctx):
             ctx.env.MCU_FULL = "ds" + ctx.env.MCU_FULL
         # Define the processor family for the old simulator.
         ctx.env.SIM_MCU = "dspic33epsuper"
-        # Load in the xc16 tools -- see `xc16_gcc.py`, `xc16_as.py`, and `xc16_ar.py`.
+        # Load in the xc16 tools.
         ctx.load("xc16_gcc xc16_as xc16_ar")
         # Locate the simulators.
         ctx.find_program(["sim30"], var="SIM30")
@@ -300,7 +300,7 @@ def sim_run_iverilog(task):
     # Run the compiler.
     sim_ret = 0
     out = ""
-    # On Windows, we have to run this in WSL. Taken from `arm-none-eabi-ar.bat`.
+    # On Windows, we have to run this in WSL.
     tmp = (
         "wsl "
         + task.inputs[0]

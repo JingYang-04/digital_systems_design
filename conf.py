@@ -88,7 +88,7 @@ language = "en"
 # directories to ignore when looking for source files.
 exclude_patterns = []
 
-# The reST default role (used for this markup: `text`) to use for all documents.
+# The reST default role to use for all documents.
 default_role = "any"
 
 # If true, '()' will be appended to :func: etc. cross-reference text.
@@ -128,7 +128,7 @@ rst_prolog = (
 .. |blank| replace:: :blank:`-`
 """
 
-# For literate programming files, provide a convenient way to refer to a source file's name. See `runestone.lp.lp._docname_role`.
+# For literate programming files, provide a convenient way to refer to a source file's name.
 """.. |docname| replace:: :docname:`name`
 """
 )
@@ -159,10 +159,10 @@ CodeChat_lexer_for_glob = {
     ".gitignore": "Perl",
 }
 #
-# **CodeChat note::** This is a list of exclude_patterns_ which applies only to
-# source documents; exclude_patterns_ will exclude the given files from all of
+# **CodeChat note::** This is a list of exclude_patterns which applies only to
+# source documents; exclude_patterns will exclude the given files from all of
 # Sphinx (for example, files here won't be included even if they're mentioned in
-# html_static_path_.
+# html_static_path).
 CodeChat_excludes = []
 #
 # Inline syntax highlight
@@ -241,7 +241,7 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 # Example: html_static_path =  runestone_static_dirs() + ['_static', 'other']
 html_static_path = runestone_static_dirs() + [
-    # See `_sources/exercises/micro-test.c`.
+    # See `/exercises/micro-test.v`.
     "_sources/exercises/micro-test.txt",
     "_sources/exams/current/exam_f_problem_01-test.txt",
     "_sources/exams/current/exam_f_problem_02-test.txt",
@@ -255,8 +255,8 @@ html_static_path = runestone_static_dirs() + [
 
 # List of extra js files that should be added to all html pages
 # Items may be a file name or a dict with properties {"file":FILENAME, "key1", "value1", "key2, "value2"...}
-#   in which case file should have the file name and other key/value pairs are used as attrs
-#   on the script tag. The sample below will set sample2.js's script tag to have the defer attr
+# in which case file should have the file name and other key/value pairs are used as attrs
+# on the script tag. The sample below will set sample2.js's script tag to have the defer attr
 # Files must be on a path contained in html_static_path
 #setup.custom_js_files = ["sample.css", {"file": "sample2.js", "defer": ""}]
 
@@ -322,7 +322,7 @@ htmlhelp_basename = 'PythonCoursewareProjectdoc'
 #
 # accessibility_style
 # -------------------
-# This config value is defined in the `../../accessibility/accessibility.py` extension.
+# This config value is defined in the ``../../accessibility/accessibility.py`` extension.
 # By this config value you can select what accessibility stylesheet
 # you want to add (``normal``, ``light``, ``darkest`` or ``none``).
 #accessibility_style = 'normal'
