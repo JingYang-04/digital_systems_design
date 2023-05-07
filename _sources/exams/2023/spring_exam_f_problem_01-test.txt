@@ -1,0 +1,8 @@
+sdin sclk expected_start comment
+   1    1              0 Idle
+   1    1              0 Idle
+   1    1              0 Idle
+   0    1              1 Start
+   0    1              0 Continued start
+   0    1              0 Continued start
+   0    1              0 Continued start

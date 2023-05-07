@@ -1,0 +1,29 @@
+#en, we, addr, din, dout
+1 1 0 24 xx #write data, port enable
+1 1 1 81 xx #write data, port enable
+1 1 2 09 xx #write data, port enable
+1 1 3 63 xx #write data, port enable
+1 1 4 0d xx #write data, port enable
+1 1 5 8d xx #write data, port enable
+1 1 6 65 xx #write data, port enable
+1 1 7 00 xx #write data, port enable
+0 1 0 00 24 #read data, port enable
+0 1 1 00 81 #read data, port enable
+0 1 2 00 09 #read data, port enable
+0 1 3 00 63 #read data, port enable
+0 1 4 00 0d #read data, port enable
+0 1 5 00 8d #read data, port enable
+0 1 6 00 65 #read data, port enable
+0 1 7 00 00 #read data, port enable
+1 0 0 01 00 #write data, port unenable, write invalid
+1 0 1 0d 00 #write data, port unenable, write invalid
+1 0 2 76 00 #write data, port unenable, write invalid
+0 1 0 00 24 #read data, port enable, write invalid checking
+0 1 1 00 81 #read data, port enable, write invalid checking
+0 1 2 00 09 #read data, port enable, write invalid checking
+1 1 3 0e xx #write data, port enable
+1 1 4 7d xx #write data, port enable
+1 1 5 63 xx #write data, port enable
+0 0 3 00 zz #read data, port unenable, read invalid checking
+0 0 4 00 zz #read data, port unenable, read invalid checking
+0 0 5 00 zz #read data, port unenable, read invalid checking
